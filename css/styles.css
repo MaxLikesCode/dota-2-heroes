@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1");
+
+:root {
+	--drop-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+		0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	--primary: #eb3226;
+}
+
+.hero-image {
+	width: 150px;
+	transform: scale3d(1, 1, 1);
+	cursor: pointer;
+	border-radius: 10px;
+	-webkit-user-select: none;
+	user-select: none;
+	/* transition: transform 0.3s, box-shadow 0.3s; */
+	transition: all 0.3s ease-in-out;
+}
+
+.hero-image:hover {
+	transform: scale3d(1.1, 1.1, 1.1);
+	box-shadow: var(--drop-shadow);
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2em;
+}
+
+header img {
+	max-width: 100%;
+}
+
+#search {
+	padding: 1em;
+	border: none;
+	color: lightgrey;
+	background-color: rgb(70, 71, 85);
+	border-radius: 9999px;
+	outline-width: 0px;
+	outline-style: solid;
+	outline-color: var(--primary);
+	transition: outline-width 0.1s;
+}
+
+#search:focus,
+#search:hover {
+	outline-width: 2px;
+}
+
+#highlight-checkbox {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+#filter-label {
+	transition: color 0.3s;
+}
+
+#highligh-label {
+	transition: color 0.3s;
+}
+
+.selected {
+	color: var(--primary);
+}
+
+#search-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	color: white;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2em;
+	padding: 0 2em;
+	max-width: 75em;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#heroes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 2em;
+	background-color: rgb(70, 71, 85);
+	border-radius: 1em;
+	box-shadow: var(--drop-shadow);
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.image-container {
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero-name {
+	color: white;
+}
+
+#not-found-text {
+	color: white;
+	font-size: 2em;
+	margin: 0 auto;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: "Crete Round", serif;
+	background-color: rgb(44, 44, 61);
+	margin: 0;
+	padding: 0;
+	gap: 1em;
+	overflow: overlay;
+}
+
+h1 {
+	font-size: 3em;
+	color: white;
+}
+
+.highlighted-image {
+	outline-style: solid;
+	outline-color: lightblue;
+	outline-width: 2px;
+	transform: scale(1.05);
+	box-shadow: 0 0px 8px 3px lightblue, 0 0px 20px 0 lightblue;
+}
+
+.dark-image {
+	filter: brightness(0.4);
+	pointer-events: none;
+}
